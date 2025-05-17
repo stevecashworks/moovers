@@ -1,0 +1,128 @@
+<svg viewBox="0 0 900 900" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black" />
+    </marker>
+  </defs>
+
+  <style>
+    .label {
+      font: 22px 'Segoe UI', sans-serif;
+      fill: #333;
+      text-anchor: middle;
+    }
+
+    .point {
+      fill: #1abc9c;
+      stroke: #fff;
+      stroke-width: 3;
+    }
+
+    .arrow {
+      fill: none;
+      stroke: #000;
+      stroke-width: 2;
+      marker-end: url(#arrowhead);
+    }
+
+    .vehicle {
+      offset-rotate: auto;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    .bike1 {
+      offset-path: path("M450,450 m-270,0 a270,270 0 0,1 270,-270");
+      animation: move1 2s linear infinite;
+    }
+
+    .forklift {
+      offset-path: path("M450,180 a270,270 0 0,1 270,270");
+      animation: move2 2s linear infinite;
+      animation-delay: 2s;
+    }
+
+    .ship {
+      offset-path: path("M720,450 a270,270 0 0,1 -270,270");
+      animation: move3 2s linear infinite;
+      animation-delay: 4s;
+    }
+
+    .bike2 {
+      offset-path: path("M450,720 a270,270 0 0,1 -270,-270");
+      animation: move4 2s linear infinite;
+      animation-delay: 6s;
+    }
+
+    @keyframes move1 {
+      0% { offset-distance: 0%; }
+      100% { offset-distance: 100%; }
+    }
+
+    @keyframes move2 {
+      0% { offset-distance: 0%; }
+      100% { offset-distance: 100%; }
+    }
+
+    @keyframes move3 {
+      0% { offset-distance: 0%; }
+      100% { offset-distance: 100%; }
+    }
+
+    @keyframes move4 {
+      0% { offset-distance: 0%; }
+      100% { offset-distance: 100%; }
+    }
+  </style>
+
+  <!-- Arrowed circle segments -->
+  <path d="M450,450 m-270,0 a270,270 0 0,1 270,-270" class="arrow"/>
+  <path d="M450,180 a270,270 0 0,1 270,270" class="arrow"/>
+  <path d="M720,450 a270,270 0 0,1 -270,270" class="arrow"/>
+  <path d="M450,720 a270,270 0 0,1 -270,-270" class="arrow"/>
+
+  <!-- Stage markers -->
+  <circle cx="180" cy="450" r="12" class="point" />
+  <text x="180" y="420" class="label">Drop-off</text>
+
+  <circle cx="450" cy="180" r="12" class="point" />
+  <text x="450" y="140" class="label">Sorting</text>
+
+  <circle cx="720" cy="450" r="12" class="point" />
+  <text x="720" y="420" class="label">Transit</text>
+
+  <circle cx="450" cy="720" r="12" class="point" />
+  <text x="450" y="755" class="label">Delivery</text>
+
+  <!-- Bike 1 -->
+  <g class="vehicle bike1" style="transform: scale(1.8);">
+    <circle cx="10" cy="0" r="5" fill="#16a085" />
+    <circle cx="30" cy="0" r="5" fill="#16a085" />
+    <rect x="10" y="-5" width="20" height="4" fill="#1abc9c" />
+    <rect x="15" y="-10" width="4" height="4" fill="#1abc9c" />
+  </g>
+
+  <!-- Forklift -->
+  <g class="vehicle forklift" style="transform: scale(1.8);">
+    <rect x="-15" y="-10" width="30" height="20" fill="#f39c12" />
+    <rect x="15" y="-10" width="5" height="20" fill="#e67e22" />
+    <circle cx="-10" cy="10" r="4" fill="#2c3e50" />
+    <circle cx="10" cy="10" r="4" fill="#2c3e50" />
+  </g>
+
+  <!-- Ship -->
+  <g class="vehicle ship" style="transform: scale(1.8);">
+    <rect x="-20" y="-10" width="40" height="10" fill="#2980b9" />
+    <polygon points="-20,-10 -25,-20 25,-20 20,-10" fill="#3498db" />
+    <rect x="-5" y="-30" width="10" height="20" fill="#34495e" />
+    <circle cx="0" cy="-35" r="3" fill="#ecf0f1" />
+  </g>
+
+  <!-- Bike 2 -->
+  <g class="vehicle bike2" style="transform: scale(1.8);">
+    <circle cx="10" cy="0" r="5" fill="#8e44ad" />
+    <circle cx="30" cy="0" r="5" fill="#8e44ad" />
+    <rect x="10" y="-5" width="20" height="4" fill="#9b59b6" />
+    <rect x="15" y="-10" width="4" height="4" fill="#9b59b6" />
+  </g>
+</svg>
