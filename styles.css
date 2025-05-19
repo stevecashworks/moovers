@@ -4,15 +4,19 @@
     width:100vw;
     background-color: rgb(36, 36, 36);
     align-items:center;
-    padding:0px 50px;
     justify-content: space-between;
+    position:relative;
+    box-sizing: border-box;
+    /* padding: 50px 20px; */
+    padding-left: 20px;
+    padding-right: 50px;
 
 }
 .logo{
    
     width:170px;
     position: relative;
-    bottom:40px;
+    
     left:40px;
 
 }
@@ -26,6 +30,7 @@ body{
     overflow-x: hidden;
     scroll-behavior: smooth;
     position:relative;
+    font-family: "Raleway", sans-serif
 
 }
 .links{
@@ -33,7 +38,7 @@ body{
     gap:20px;
     align-items:center;
     position:relative;
-    bottom:45px;
+    
 
 
 }
@@ -95,6 +100,7 @@ bottom:20px;
     color:white;
     border:none;
     display: block;
+    margin-top: 30px;;
     
 
 }
@@ -130,7 +136,7 @@ bottom:20px;
 
 #services{
     width:100vw;
-    height: 600px;
+    
 }
 
 /* Base Reset */
@@ -171,7 +177,6 @@ bottom:20px;
     flex-direction: column;
     gap:5px;
     position: relative;
-    bottom:45px;
     cursor: pointer;
 ;
 }
@@ -201,7 +206,7 @@ bottom:20px;
 }
 .service-card img {
   width: 100%;
-  height: 300px;
+  height: 200px;
   object-fit: cover;
   border-radius: 12px;
   display: block;
@@ -246,6 +251,104 @@ bottom:20px;
   opacity:0.7;
 
 }
+
+#how-it-works {
+    padding: 60px 20px;
+  
+    color: #333;
+    flex: 1;
+  }
+
+  .how-it-works-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .how-it-works-container h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+  }
+
+  .steps-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .step {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    flex: 1 1 200px;
+    transition: transform 0.3s ease;
+  background-color: white;
+  color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  }
+  .procedure-title{
+    text-align: center;
+    
+  }
+  .step:hover {
+    transform: translateY(-5px);
+    background-color: white;
+    color:blueviolet;
+  }
+
+  .step h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .step p {
+    font-size: 16px;
+    line-height: 1.6;
+    display: none;
+  }
+  .procedure{
+    display:flex;
+    position:relative;
+    padding-left: 50px;
+    align-items: center;
+
+  }
+  .svg{
+    flex:1.2;
+    opacity: 0.5;
+
+  }
+   #map {
+      height: 500px;
+      width: 100%;
+    }
+
+  @media (max-width: 768px) {
+    .steps-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position:relative;
+      bottom:20px;
+    }
+    .procedure{
+      flex-direction: column-reverse;
+      padding-left: 10px;
+    }
+    .scroll{
+      bottom:-20px;
+    }
+    .svg{
+      transform: scale(1.5);
+      margin-top: 25px;
+    }
+  }
+
 .responsive-nav.open{
   transform: scaleY(1);
 }
